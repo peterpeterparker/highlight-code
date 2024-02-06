@@ -1,0 +1,71 @@
+{
+  "name": "@deckdeckgo/highlight-code",
+  "version": "4.4.0",
+  "description": "A Web Component to highlight your code",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.js",
+  "es2015": "dist/esm/index.js",
+  "es2017": "dist/esm/index.js",
+  "jsnext:main": "dist/esm/index.js",
+  "types": "dist/types/interface.d.ts",
+  "collection": "dist/collection/collection-manifest.json",
+  "collection:main": "dist/collection/index.js",
+  "unpkg": "dist/deckdeckgo-highlight-code/deckdeckgo-highlight-code.esm.js",
+  "files": [
+    "dist/",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "config": "node scripts/config.languages.mjs && prettier --write src/declarations/languages.ts",
+    "build": "npm run config && stencil build --docs",
+    "dev": "npm run start",
+    "start": "npm run config && stencil build --dev --watch --serve",
+    "test": "npm run config && stencil test --spec --e2e",
+    "test.watch": "npm run config && stencil test --spec --e2e --watchAll"
+  },
+  "dependencies": {
+    "@deckdeckgo/utils": "^5.1.0",
+    "prismjs": "^1.27.0"
+  },
+  "devDependencies": {
+    "@deckdeckgo/slide-utils": "^4.0.3",
+    "@types/prismjs": "^1.26.0",
+    "node-fetch": "^3.1.1",
+    "@stencil/core": "^2.17.4",
+    "@stencil/postcss": "^2.1.0",
+    "@stencil/sass": "^1.5.2",
+    "@types/jest": "^26.0.24",
+    "@types/puppeteer": "5.4.4",
+    "autoprefixer": "^10.4.8",
+    "esbuild": "^0.14.10",
+    "husky": "^7.0.4",
+    "jest": "^27.4.7",
+    "jest-cli": "^27.4.7",
+    "prettier": "^2.7.1",
+    "prettier-plugin-organize-imports": "^3.1.1",
+    "puppeteer": "^13.1.3",
+    "typescript": "^4.4.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/peterpeterparker/highlight-code.git"
+  },
+  "author": "David Dal Busco",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/peterpeterparker/highlight-code"
+  },
+  "keywords": [
+    "stencil",
+    "stenciljs",
+    "web components",
+    "pwa",
+    "progressive web app",
+    "presentation",
+    "slides",
+    "slideshow",
+    "talk",
+    "prismjs"
+  ]
+}
